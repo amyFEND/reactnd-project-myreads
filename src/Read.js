@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Books from './Books'
 
 class Read extends Component {
 
@@ -8,7 +9,7 @@ class Read extends Component {
         <h2 className="bookshelf-title">Read</h2>
         <div className="bookshelf-books">
           <ol className="books-grid">
-
+            <Books />
           </ol>
         </div>
       </div>
