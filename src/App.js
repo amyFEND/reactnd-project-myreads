@@ -1,8 +1,6 @@
 import React from 'react'
 // import * as BooksAPI from './BooksAPI'
-import CurrentlyReading from './CurrentlyReading'
-import WantToRead from './WantToRead'
-import Read from './Read'
+
 import './App.css'
 
 class BooksApp extends React.Component {
@@ -20,37 +18,9 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         {this.state.showSearchPage ? (
-          <div className="search-books">
-            <div className="search-books-bar">
-              <a className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</a>
-              <div className="search-books-input-wrapper">
-                {/*
-                  NOTES: The search from BooksAPI is limited to a particular set of search terms, which can be found: https://github.com/udacity/reactnd-project-myreads-starter/blob/master/SEARCH_TERMS.md
-                */}
-                <input type="text" placeholder="Search by title or author"/>
 
-              </div>
-            </div>
-            <div className="search-books-results">
-              <ol className="books-grid"></ol>
-            </div>
-          </div>
         ) : (
-          <div className="list-books">
-            <div className="list-books-title">
-              <h1>MyReads</h1>
-            </div>
-            <div className="list-books-content">
-              <div>
-                <CurrentlyReading />
-                <WantToRead />
-                <Read />
-              </div>
-            </div>
-            <div className="open-search">
-              <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
-            </div>
-          </div>
+
         )}
       </div>
     )
