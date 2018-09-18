@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 class WantToRead extends Component {
-  
+
   render() {
     return (
       <div className="bookshelf">
@@ -50,3 +50,5 @@ class WantToRead extends Component {
     )
   }
 }
+
+export default WantToRead;
