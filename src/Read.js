@@ -69,4 +69,4 @@ class Read extends Component {
   }
 }
 
-export default Read;
+export default Read

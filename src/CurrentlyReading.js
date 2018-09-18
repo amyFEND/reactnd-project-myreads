@@ -51,4 +51,4 @@ class CurrentlyReading extends Component {
   }
 }
 
-export default CurrentlyReading;
+export default CurrentlyReading

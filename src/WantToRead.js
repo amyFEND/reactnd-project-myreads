@@ -51,4 +51,4 @@ class WantToRead extends Component {
   }
 }
 
-export default WantToRead;
+export default WantToRead
