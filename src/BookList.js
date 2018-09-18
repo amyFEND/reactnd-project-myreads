@@ -4,9 +4,6 @@ import WantToRead from './WantToRead'
 import Read from './Read'
 
 class BookList extends Component {
-  state = {
-    showSearchPage: false
-  }
 
   render() {
     return (
