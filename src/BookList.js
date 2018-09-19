@@ -13,9 +13,9 @@ class BookList extends Component {
         </div>
         <div className="list-books-content">
           <div>
-            <CurrentlyReading />
-            <WantToRead />
-            <Read />
+            <CurrentlyReading books={this.props.books} />
+            <WantToRead books={this.props.books} />
+            <Read books={this.props.books} />
           </div>
         </div>
         <div className="open-search">

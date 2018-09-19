@@ -20,7 +20,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         <BookSearch />
-        <BookList />
+        <BookList books={this.state.books}/>
       </div>
     )
   }
