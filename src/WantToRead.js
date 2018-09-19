@@ -4,6 +4,8 @@ import Books from './Books'
 class WantToRead extends Component {
 
   render() {
+    const { books } = this.props
+
     return (
       <div className="bookshelf">
         <h2 className="bookshelf-title">Want to Read</h2>
