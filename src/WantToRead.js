@@ -9,7 +9,13 @@ class WantToRead extends Component {
         <h2 className="bookshelf-title">Want to Read</h2>
         <div className="bookshelf-books">
           <ol className="books-grid">
-            <Books books={this.props.books} />
+            {
+              this.props.books
+              .filter(book => book.shelf === 'wantToRead')
+              .map(book =>(
+                <Books />
+              ))
+            }
           </ol>
         </div>
       </div>
