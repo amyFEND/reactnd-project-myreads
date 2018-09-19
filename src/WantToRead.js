@@ -15,7 +15,7 @@ class WantToRead extends Component {
               this.props.books
               .filter(book => book.shelf === 'wantToRead')
               .map(book =>(
-                <Books />
+                <Books book={book} key={book.id} />
               ))
             }
           </ol>
