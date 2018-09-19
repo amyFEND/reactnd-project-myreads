@@ -12,8 +12,7 @@ class CurrentlyReading extends Component {
         <div className="bookshelf-books">
           <ol className="books-grid">
             {
-              this.props.books
-              .filter(book => book.shelf === 'currentlyReading')
+              books.filter(book => book.shelf === 'currentlyReading')
               .map(book =>(
                 <Books book={book} key={book.id} />
               ))
