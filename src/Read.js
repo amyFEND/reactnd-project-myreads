@@ -14,7 +14,11 @@ class Read extends Component {
             {
               books.filter(book => book.shelf === 'read')
               .map(book =>(
-                <Books book={book} key={book.id} />
+                <Books
+                  book={book}
+                  key={book.id}
+                  changeShelf={this.props.changeShelf}
+                />
               ))
             }
           </ol>
