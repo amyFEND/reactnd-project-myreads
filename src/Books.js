@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import noCoverImg from './icons/BookCoverUnavailable.png'
 
 class Books extends Component {
 
   render() {
     const { book } = this.props
-    let thumbnailImg = book.imageLinks ? book.imageLinks.thumbnail : ''
+    let thumbnailImg = book.imageLinks ? book.imageLinks.thumbnail : noCoverImg
 
     return (
       <li>
