@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import CurrentlyReading from './CurrentlyReading'
-import WantToRead from './WantToRead'
-import Read from './Read'
 
 class BookSearch extends Component {
 
