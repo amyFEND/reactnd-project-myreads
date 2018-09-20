@@ -1,18 +1,34 @@
 import React, { Component } from 'react'
+import Books from './Books'
+import * as BooksAPI from './BooksAPI'
+import escapeRegExp from 'escape-string-regexp'
 
 class BookSearch extends Component {
 
   state = {
-    query: ''
+    query: '',
+    searchedBooks: []
   }
 
   updateQuery = (query) => {
-  this.setState({ query })
+    this.setState({ query })
+
+    this.searchBooks(query)
+  }
+
+  searchBooks = (query) => {
+    {
+      query ? (
+        BooksAPI.search(query).then((searchedBooks) => {
+          this.setState({ searchedBooks })
+        }))
+        : this.setState({ searchedBooks: [] })
+    }
   }
 
   render() {
     const { books } = this.props
-    const { query } = this.state
+    const { query, searchedBooks } = this.state
 
     return (
       <div className="search-books">
@@ -29,7 +45,13 @@ class BookSearch extends Component {
           </div>
         </div>
         <div className="search-books-results">
-          <ol className="books-grid"></ol>
+          <ol className="books-grid">
+            {
+              searchedBooks.map((searchedBook) => (
+                <Books books={books} book={searchedBook} key={searchedBook.id} />
+              ))
+            }
+          </ol>
         </div>
       </div>
     )
