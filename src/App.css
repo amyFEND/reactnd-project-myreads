@@ -6,6 +6,7 @@ body {
 }
 body, .app {
   background: white;
+  font-family: 'Shadows Into Light', cursive;
 }
 
 /* main page */
@@ -96,6 +97,8 @@ body, .app {
   border: none;
   outline: none;
   color: #c28285;
+  font-family: 'Shadows Into Light', cursive;
+  
 }
 
 .close-search {
