@@ -4,12 +4,13 @@ class Books extends Component {
 
   render() {
     const { book } = this.props
+    let thumbnailImg = book.imageLinks ? book.imageLinks.thumbnail : ''
 
     return (
       <li>
         <div className="book">
           <div className="book-top">
-            <div className="book-cover" style={{ backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
+            <div className="book-cover" style={{ backgroundImage: `url("${thumbnailImg}")` }}></div>
             <div className="book-shelf-changer">
               <select
                 value={book.shelf}
