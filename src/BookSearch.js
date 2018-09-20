@@ -17,12 +17,14 @@ class BookSearch extends Component {
   }
 
   searchBooks = (query) => {
-    {
-      query ? (
-        BooksAPI.search(query).then((searchedBooks) => {
-          this.setState({ searchedBooks })
-        }))
-        : this.setState({ searchedBooks: [] })
+    { query ?
+      ( BooksAPI.search(query).then((searchedBooks) => {
+          searchedBooks.error ?
+            ( this.setState({ searchedBooks: [] }) )
+          : ( this.setState({ searchedBooks }) )
+        })
+      )
+      : ( this.setState({ searchedBooks: [] }) )
     }
   }
 
