@@ -33,6 +33,7 @@ class BooksApp extends React.Component {
           books={ books }
           changeShelf={this.changeShelf}
         />
+        <BookSearch />
       </div>
     )
   }
