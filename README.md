@@ -1,92 +1,83 @@
-# MyReads Project
+# Amy's MyReads Project
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+This is the assessment project for Udacity's React Fundamentals course.  The initial template given by Udacity as a tool to save time (by providing a static example of the CSS and HTML markup to be used) without any of the React code needed to complete the project.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+Grading is based on Udacity's [MyReads Project Rubric](https://review.udacity.com/#!/rubrics/918/view), and [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html), [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html), [JavaScript](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html), [Git](https://udacity.github.io/git-styleguide/) Style Guides.
 
-## TL;DR
+## How to Access this Project
 
-To get started developing right away:
+This project was created and maintained using [Atom](https://atom.io/) Code Editor and submitted on Udacity's Workspace.  To get started with this project:
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+>Note: [Node.js](https://nodejs.org/en/) is required to run application.
 
-## What You're Getting
-```bash
-├── CONTRIBUTING.md
-├── README.md - This file.
-├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
-├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
-├── public
-│   ├── favicon.ico # React Icon, You may change if you wish.
-│   └── index.html # DO NOT MODIFY
-└── src
-    ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
-    ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
-    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
-    ├── icons # Helpful images for your app. Use at your discretion.
-    │   ├── add.svg
-    │   ├── arrow-back.svg
-    │   └── arrow-drop-down.svg
-    ├── index.css # Global styles. You probably won't need to change anything here.
-    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
-```
+* Clone repository into directory of choice: `git clone https://github.com/amyFEND/reactnd-project-myreads.git`
+* Install all project dependencies with `npm install`
+* Start the development server with `npm start`
+>If browser does not automatically open with the application running, navigate to [http://localhost:3000](http://localhost:3000)
 
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
+Or, if in the Udacity Workspace:
+* Open a new terminal window within the Workspace
+* Run `npm install`
+* Run `npm start`
+* Click *[insert preview button image here]* to run application
 
-## Backend Server
+*[Image of whole app]*
 
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+## How to Use MyReads App
 
-* [`getAll`](#getall)
-* [`update`](#update)
-* [`search`](#search)
+  Books are sorted into three shelves: Currently Reading, Want to Read, and Read.
 
-### `getAll`
+### Change Shelves
+ * Click on *[shelf change icon]*
+ * Click the shelf of choice to move book to selected shelf *[Image of shelf options]*
 
-Method Signature:
+### Add Books
+  * Click on *[add icon]*
+  * Enter text into search field *[search bar image]*
+    * Up to 20 books will show in search
+    *[Image of search result]*
+  * Follow Change Shelves section (above) to add books to shelves
 
-```js
-getAll()
-```
+>Accepted terms are limited. See below for accepted search terms.
 
-* Returns a Promise which resolves to a JSON object containing a collection of book objects.
-* This collection represents the books currently in the bookshelves in your app.
+#### Accepted Search Terms
 
-### `update`
+*Only* the following are accepted by the search function:
+>'Android', 'Art', 'Artificial Intelligence', 'Astronomy', 'Austen',
+>'Baseball', 'Basketball', 'Bhagat', 'Biography', 'Brief', 'Business',
+>'Camus', 'Cervantes', 'Christie', 'Classics', 'Comics', 'Cook', 'Cricket', 'Cycling',
+>'Desai', 'Design', 'Development', 'Digital Marketing', 'Drama', 'Drawing', 'Dumas',
+>'Education', 'Everything', 'Fantasy', 'Film', 'Finance', 'First', 'Fitness', 'Football', 'Future',
+>'Games', 'Gandhi', 'Homer', 'Horror', 'Hugo', 'Ibsen', 'Journey', 'Kafka', 'King',
+>'Lahiri', 'Larsson', 'Learn', 'Literary Fiction', 'Make', 'Manage', 'Marquez', 'Money', 'Mystery',
+>'Negotiate', 'Painting', 'Philosophy', 'Photography', 'Poetry', 'Production', 'Programming',
+>'React', 'Redux', 'River', 'Robotics', 'Rowling', 'Satire',
+>'Science Fiction', 'Shakespeare', 'Singh', 'Swimming', 'Tale', 'Thrun', 'Time', 'Tolstoy',
+>'Travel', 'Ultimate', 'Virtual Reality', 'Web Development', 'iOS'
 
-Method Signature:
 
-```js
-update(book, shelf)
-```
+## Thank You to:
 
-* book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
-* Returns a Promise which resolves to a JSON object containing the response data of the POST request
+* [Maeva](https://www.youtube.com/channel/UCqKeTmQIyIXxSSKfFdfbnIg) for taking the time to create an amazing [step-by-step guide](https://www.youtube.com/watch?v=i6L2jLHV9j8&feature=youtu.be).
+* [Michael](https://twitter.com/mjackson), [Ryan](https://twitter.com/ryanflorence), and [Tyler](https://twitter.com/tylermcginnis) for creating the Udacity course on [React](https://twitter.com/reactjs).
 
-### `search`
+## Resources
 
-Method Signature:
-
-```js
-search(query)
-```
-
-* query: `<String>`
-* Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
-
-## Important
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
-
-## Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+* [React Documentation](https://reacttraining.com/react-router/web/guides/philosophy)
+* [Create React App](https://github.com/facebookincubator/create-react-app)
+* [GitHub Markdown Documentation](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
+* [Codeburst's Guide to GitHub Pages](https://codeburst.io/deploy-react-to-github-pages-to-create-an-amazing-website-42d8b09cd4d)
+* [Shadows Into Light Font](https://fonts.google.com/specimen/Shadows+Into+Light?selection.family=Shadows+Into+Light)
+* [Udacity Initial Project Template](https://github.com/udacity/reactnd-project-myreads-starter)
+* [MyReads Project Rubric](https://review.udacity.com/#!/rubrics/918/view)
+* Udacity's Style Guides:
+  * [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
+  * [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
+  * [JavaScript](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
+  * [Git](https://udacity.github.io/git-styleguide/)
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+This repository has been forked from Udacity's [Initial Project Template](https://github.com/udacity/reactnd-project-myreads-starter). Therefore, pull requests will most likely not be accepted.
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+For more details, check out [CONTRIBUTING.md](CONTRIBUTING.md) and the original README file ([PROJECTINSTRUCTIONS.md](PROJECTINSTRUCTIONS.md)).
