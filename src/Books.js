@@ -4,8 +4,9 @@ import noCoverImg from './icons/BookCoverUnavailable.png'
 class Books extends Component {
 
   render() {
-    const { book } = this.props
+    const { book, defaultShelf } = this.props
     let thumbnailImg = book.imageLinks ? book.imageLinks.thumbnail : noCoverImg
+    let currentShelf = defaultShelf ? defaultShelf : book.shelf
 
     return (
       <li>
@@ -14,7 +15,7 @@ class Books extends Component {
             <div className="book-cover" style={{ backgroundImage: `url("${thumbnailImg}")` }}></div>
             <div className="book-shelf-changer">
               <select
-                value={book.shelf}
+                value={currentShelf}
                 onChange={(e) => this.props.changeShelf(
                   this.props.book, e.target.value
                 )}
