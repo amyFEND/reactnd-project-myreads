@@ -19,23 +19,23 @@ Or, if in the Udacity Workspace:
 * Open a new terminal window within the Workspace
 * Run `npm install`
 * Run `npm start`
-* Click *[insert preview button image here]* to run application
+* Click ![alt text](src/screenshots/Preview Button.png "Udacity Workspace Preview Button") to run application
 
-*[Image of whole app]*
+![alt text](src/screenshots/MyReads Homepage.png "MyReads Homescreen")
 
 ## How to Use MyReads App
 
   Books are sorted into three shelves: Currently Reading, Want to Read, and Read.
 
 ### Change Shelves
- * Click on *[shelf change icon]*
+ * Click on ![alt text](src/screenshots/Change Shelf Icon.png "Change Shelf Icon")
  * Click the shelf of choice to move book to selected shelf *[Image of shelf options]*
 
 ### Add Books
-  * Click on *[add icon]*
-  * Enter text into search field *[search bar image]*
+  * Click on ![alt text](src/screenshots/Add.png "Add/Search Book")
+  * Enter text into search field ![alt text](src/screenshots/Search Bar.png "Search Bar")
     * Up to 20 books will show in search
-    *[Image of search result]*
+![alt text](src/screenshots/Search Results.png "Search Results Example")
   * Follow Change Shelves section (above) to add books to shelves
 
 >Accepted terms are limited. See below for accepted search terms.
