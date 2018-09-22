@@ -7,6 +7,7 @@ class Books extends Component {
     const { book, defaultShelf } = this.props
     let thumbnailImg = book.imageLinks ? book.imageLinks.thumbnail : noCoverImg
     let currentShelf = defaultShelf ? defaultShelf : book.shelf
+    let bookAuthors = book.authors ? (book.authors.length > 1 ? `${book.authors[0]}, et al.` : book.authors) : 'No Author'
 
     return (
       <li>
@@ -29,7 +30,7 @@ class Books extends Component {
 
           <div className="book-title">{book.title}</div>
 
-          <div className="book-authors">{book.authors}</div>
+          <div className="book-authors">{bookAuthors}</div>
 
         </div>
       </li>
