@@ -38,10 +38,9 @@ Or, if in the Udacity Workspace:
   * Enter text into search field
 
   ![Search Bar](src/screenshots/SearchBar.png)
-  
-    * Up to 20 books will show in search
-![Search Results Example](src/screenshots/SearchResults.png)
   * Follow Change Shelves section (above) to add books to shelves
+
+![Search Results Example](src/screenshots/SearchResults.png)
 
 >Accepted terms are limited. See below for accepted search terms.
 
