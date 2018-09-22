@@ -17,7 +17,7 @@ class BookSearch extends Component {
   }
 
   searchBooks = (query) => {
-    { query ?
+    query ?
       ( BooksAPI.search(query).then((searchedBooks) => {
           searchedBooks.error ?
             ( this.setState({ searchedBooks: [] }) )
@@ -25,7 +25,6 @@ class BookSearch extends Component {
         })
       )
       : ( this.setState({ searchedBooks: [] }) )
-    }
   }
 
   render() {
