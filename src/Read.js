@@ -8,7 +8,9 @@ class Read extends Component {
 
     return (
       <div className="bookshelf">
+
         <h2 className="bookshelf-title">Read</h2>
+
         <div className="bookshelf-books">
           <ol className="books-grid">
             {
@@ -23,6 +25,7 @@ class Read extends Component {
             }
           </ol>
         </div>
+
       </div>
     )
   }

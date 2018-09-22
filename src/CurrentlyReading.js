@@ -8,7 +8,9 @@ class CurrentlyReading extends Component {
 
     return (
       <div className="bookshelf">
+
         <h2 className="bookshelf-title">Currently Reading</h2>
+
         <div className="bookshelf-books">
           <ol className="books-grid">
             {
@@ -23,6 +25,7 @@ class CurrentlyReading extends Component {
             }
           </ol>
         </div>
+
       </div>
     )
   }

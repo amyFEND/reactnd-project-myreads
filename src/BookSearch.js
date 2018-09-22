@@ -20,11 +20,13 @@ class BookSearch extends Component {
     query ?
       ( BooksAPI.search(query).then((searchedBooks) => {
           searchedBooks.error ?
-            ( this.setState({ searchedBooks: [] }) )
-          : ( this.setState({ searchedBooks }) )
+          ( this.setState({ searchedBooks: [] }) )
+          :
+          ( this.setState({ searchedBooks }) )
         })
       )
-      : ( this.setState({ searchedBooks: [] }) )
+      :
+      ( this.setState({ searchedBooks: [] }) )
   }
 
   render() {
@@ -33,8 +35,11 @@ class BookSearch extends Component {
 
     return (
       <div className="search-books">
+
         <div className="search-books-bar">
+
           <Link to="/" className="close-search">Close</Link>
+
           <div className="search-books-input-wrapper">
             <input
               type="text"
@@ -45,6 +50,7 @@ class BookSearch extends Component {
 
           </div>
         </div>
+
         <div className="search-books-results">
           {
             query === '' && searchedBooks.length === 0 ?
@@ -56,6 +62,7 @@ class BookSearch extends Component {
                 (<h3>No results found!</h3>)
               )
           }
+
           <ol className="books-grid">
             {
               searchedBooks.map((searchedBook) => {
@@ -78,7 +85,9 @@ class BookSearch extends Component {
               })
             }
           </ol>
+
         </div>
+
       </div>
     )
   }
