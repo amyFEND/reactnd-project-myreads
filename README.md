@@ -30,12 +30,15 @@ Or, if in the Udacity Workspace:
 ### Change Shelves
  * Click on ![Change Shelf Icon](src/screenshots/ChangeShelfIcon.png)
  * Click the shelf of choice to move book to selected shelf
+
  ![Change Shelf Options Example](src/screenshots/ChangeShelfOptions.png)
 
 ### Add Books
   * Click on ![Add/Search Book](src/screenshots/Add.png)
   * Enter text into search field
+
   ![Search Bar](src/screenshots/SearchBar.png)
+  
     * Up to 20 books will show in search
 ![Search Results Example](src/screenshots/SearchResults.png)
   * Follow Change Shelves section (above) to add books to shelves
